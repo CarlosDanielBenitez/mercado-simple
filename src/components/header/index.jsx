@@ -48,7 +48,7 @@ const MobileMenu = () => {
           <li><a onClick={goToServices}>Services</a></li>
           <li><a onClick={goToContact}>Contact</a></li>
           <li onClick={goToCart} className='menu-cart-container'>
-            <img src="../src/img/finished-cart.png" alt="cart" className="menu-cart-image" />
+            <img src="..\src\img\buy.jpg" alt="cart" className="menu-cart-image" />
             <div className="menu-cart-count-container">
               <span className="menu-cart-count">{cart.length}</span>
             </div>

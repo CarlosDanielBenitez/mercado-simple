@@ -23,7 +23,7 @@ export const Cart = () => {
                         <div key={product.id} className="cartItem">
 
                             <div className="cartImageContainer">
-                                <img src={product.image} alt={product.name} className="cardImage" />
+                                <img src='..\src\img\finished-cart.png' alt={product.name} className="cardImage" />
                             </div>
 
                             <div className="cartContentContainer">

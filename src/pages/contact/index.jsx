@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './style.css'; 
+import './style.css';
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -17,7 +18,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  console.log(formData);
+ 
+    localStorage.setItem('formData', JSON.stringify(formData));
   };
 
   return (
@@ -47,3 +49,4 @@ const Contact = () => {
 }
 
 export default Contact;
+
