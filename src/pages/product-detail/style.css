@@ -1,0 +1,29 @@
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.headerDetailContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.headerDetailContainer .backButton {
+  border: none;
+  background-color: rgba(231, 222, 222, 0.705);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: 1.3rem;
+  transition: all 0.1s ease-in;
+}
+
+.headerDetailContainer .backButton:hover {
+  scale: 1.02;
+  padding: 3px;
+  box-shadow: 2px 2px 1px #fff;
+}

@@ -1,0 +1,113 @@
+.cardDetail {
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 0.1rem rgba(97, 91, 91, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  max-height: 300px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cardDetailImageContainer{
+  padding: 0rem 1rem;
+}
+.cardDetailImage {
+  width:250px;
+  height:300px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+}
+
+.cardDetailContent {
+  display: flex;
+  flex-direction: column;
+  text-align: start; 
+  
+}
+
+.cardDetailName {
+  font-size: 1.10rem;
+  padding: 0.3rem 0;
+}
+
+.cardDetailCategory {
+  font-size: 1.07rem;
+  color: #5ebdbd;
+  font-weight: bold;
+  padding: 0.3rem 0;
+}
+
+.cardDetailDescription {
+  text-align: start;
+ 
+}
+
+.cardDetailPrice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5ebdbd;
+  padding: 0.3rem 0;
+}
+
+.cardDetailStock {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.3rem 0;
+}
+
+.cardDetailActions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  justify-content: start;
+}
+
+.cardDetailButton {
+
+  border: none;
+  background-color: #5ebdbd;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+}
+.cardDetailButton:hover{
+  background-color: #0077ff;
+  cursor: cell;
+  scale: 1.05;
+  
+}
+
+
+
+.backButton {
+  border: none;
+  background-color: rgba(231, 222, 222, 0.705);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: 1.3rem;
+  color: black;
+  transition: all 0.1s ease-in;
+}
+.backButton:hover {
+  scale: 1.02;
+  padding: 3px;
+  box-shadow: 2px 2px 1px #fff;
+}
+
+
+@media (max-width: 768px) {
+  .cardDetail{
+    width: 100%;
+    margin: 0.5rem;
+
+    max-height: none;
+  }
+  .cardDetailImage {
+    object-fit: cover;
+    border-radius: 0.7rem;
+  }
+}

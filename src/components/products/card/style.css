@@ -1,0 +1,104 @@
+.card {
+    background-color: #ffffff;
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: .5rem;
+    padding: 1rem;
+    max-width: 25rem;
+   
+    transition: all .3s ease-in-out;
+}
+
+.card:hover{
+    scale: 1.02;
+    cursor: pointer;
+}
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    
+}
+
+.cardName {
+    font-size: 1.2rem;
+    padding: .3rem 0;
+}
+
+.cardCategory {
+    font-size: .8rem;
+    color: #5ebdbd;
+    font-weight: bold;
+    padding: .3rem 0;
+}
+
+.cardDescription {
+    font-size: .9rem;
+    padding: .3rem 0;
+    min-height: 4rem;
+    text-align: center;
+
+}
+
+.cardPrice {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #5ebdbd;
+    padding: .3rem 0;
+}
+
+.cardStock {
+    font-size: .7rem;
+    color: #5ebdbd;
+    font-weight: bold;
+    padding: .3rem 0;
+
+}
+
+.cardActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.cardButton {
+    border: none;
+    background-color: #5ebdbd;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: .2rem;
+}
+.cardButton:hover{
+    background-color: #51d1f1c0;
+    cursor: cell;
+    scale: 1.05;
+}
+
+.cartButtonContainer{
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+.cartButtonContainer:hover{
+    background-color: #fff;
+
+}
+
+.cartButtonContainer:active{
+ 
+    outline: none;
+}
