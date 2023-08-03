@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useMemo, useState } from 'react';
 import './style.css';
 import { CartContext } from '../../context/cart-context';
 import { firebaseServices } from '../../servicios/firebase';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function useQuery() {
   const { search } = useLocation();
@@ -21,8 +21,8 @@ const Checkout = () => {
   };
   const [formData, setFormData] = useState(initialFormData);
   const { cart, total, setCart } = useContext(CartContext);
-  const [orderCreated, setOrderCreated] = useState(null);
   const { state } = useLocation();
+  const navigate = useNavigate();
   let query = useQuery();
 
 
@@ -77,7 +77,7 @@ const Checkout = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { orderId } = await onHandlerOrder();
-    setOrderCreated(orderId)
+    navigate('/success-order', { state: { orderId: orderId.id } }) 
   };
 
   useEffect(() => {

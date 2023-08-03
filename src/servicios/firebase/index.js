@@ -1,4 +1,4 @@
-import { collection, getFirestore, addDoc, query, where, documentId, updateDoc, doc, getDoc } from 'firebase/firestore'
+import { collection, getFirestore, addDoc, updateDoc, doc, getDoc } from 'firebase/firestore'
 
 
 
@@ -32,31 +32,27 @@ export const firebaseServices = {
     updateCart: async (cartId) => {
         try {
             const db = getFirestore();
-            // const q = query(
-            //     collection(db, 'carts'),
-            //     where(documentId(), '==', cartId)
-            // )
             const docRef = doc(db, 'carts', cartId);
             const data = {
                 status: 'completed'
             }
 
-           await updateDoc(docRef, data);
-           
+            await updateDoc(docRef, data);
+
         } catch (error) {
             console.error(error);
             return { error }
         }
     },
 
-    getCartById: async (cartId) =>{
+    getCartById: async (cartId) => {
         try {
             const db = getFirestore();
             const docRef = doc(db, 'carts', cartId);
             const result = await getDoc(docRef);
             return result.data()
         } catch (error) {
-            return {error}
+            return { error }
         }
     },
 }

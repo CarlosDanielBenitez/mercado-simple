@@ -7,7 +7,7 @@ import { firebaseServices } from '../../servicios/firebase';
 
 
 export const Cart = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const { cart, onAddToCart, onDecreaseItem, onRemoveItem, total, getTotalItemQuantity } = useContext(CartContext);
 
     const onHandlerCreateCart = async () => {

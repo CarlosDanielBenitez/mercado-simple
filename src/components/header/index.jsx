@@ -23,7 +23,7 @@ const MobileMenu = () => {
   
 
   const goToHome = () =>{
-    navigate('/home')
+    navigate('/')
   }
 
   const goToAbout = () =>{
