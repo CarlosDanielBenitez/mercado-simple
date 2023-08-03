@@ -12,7 +12,7 @@ function ProductDetail() {
 
     const { data, loading, error } = useFetch(urlProductDetail, API_URLS.PRODUCTS.config);
     const history = window.history;
-
+    console.log({data});
 
     return (
         <>

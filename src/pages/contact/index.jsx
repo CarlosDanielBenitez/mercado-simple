@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import './style.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: '',
+    surname: '',
     email: '',
     subject: '',
     message: '',
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleChange = (e) => {
     setFormData({
@@ -18,8 +21,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
- 
     localStorage.setItem('formData', JSON.stringify(formData));
+    setFormData(initialFormData); 
   };
 
   return (
@@ -29,6 +32,10 @@ const Contact = () => {
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="surname">Surname:</label>
+          <input type="text" id="surname" name="surname" value={formData.surname} onChange={handleChange} required />
         </div>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
@@ -49,4 +56,3 @@ const Contact = () => {
 }
 
 export default Contact;
-

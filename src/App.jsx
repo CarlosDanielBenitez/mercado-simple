@@ -19,6 +19,7 @@ function App() {
         <MobileMenu />
         <Routes>
           <Route path="/" element={<Home />}> </Route>
+          <Route path="/Home" element={<Home />}> </Route>
           <Route path="/about" element={<AboutSection />}> </Route>
           <Route path="/services" element={<Services />}> </Route>
           <Route path="/products/:productId" element={<ProductDetail />}></Route>
