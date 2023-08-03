@@ -1,0 +1,19 @@
+.categoryContainer {
+    overflow: hidden;
+    min-width: 200px;
+    height: fit-content;
+    background-color: #0077ff50;
+    padding: 1rem;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    color: #000000;
+  }
+  .categoryContainer:hover {
+    background-color: #0059ffb0;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .categoryName {
+    font-size: 1rem;
+  }

@@ -8,13 +8,13 @@ import { API_URLS } from "../../constants/index"
 import { useNavigate } from "react-router-dom";
 import Slider from "../../components/slider";
 import { CartContext } from "../../context/cart-context";
+import CategoryItem from "../../components/categories/item";
 
 
 
 
 function Home() {
     const navigate = useNavigate();
-    const [search, setSearch] = useState("");
     const [active, setActive] = useState(false);
     const [isFiltered, setIsFiltered] = useState(false);
     const [productFiltered, setProductFiltered] = useState([]);
@@ -43,7 +43,6 @@ function Home() {
 
     const onChange = (e) => {
         const value = e.target.value;
-        setSearch(value);
         filterBySearch(value);
     }
 
@@ -82,23 +81,10 @@ function Home() {
                     {errorCategories ? <h2>{errorCategories} </h2> : null}
 
                     <Slider>
-                        <button
-                            onClick={() => setIsFiltered(false)}
-                            type='button'
-                            className="categoryContainer"
-                        >
-                            <p className="categoryName">All</p>
-                        </button>
+                        <CategoryItem onSelectCategory={() => setIsFiltered(false)} type="button" name="All" />
                         {
                             categories.map((category) => (
-                                <button
-                                    key={category.id}
-                                    onClick={() => onFilter(category.name)}
-                                    type='button'
-                                    className="categoryContainer"
-                                >
-                                    <p className="categoryName">{category.name}</p>
-                                </button>
+                                <CategoryItem key={category.id} name={category.name} onSelectCategory={() => onFilter(category.name)} type="button" />
                             ))
                         }
                     </Slider>
