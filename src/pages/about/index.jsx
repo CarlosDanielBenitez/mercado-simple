@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutLogo from "../../img/robot-waving.jpg"
 import './style.css';
 
 
@@ -7,7 +8,7 @@ const AboutSection = () => {
         <section className="about-section">
             <div className="about-content">
                 <div className="about-image">
-                    <img src='../../src/img/robot-waving.jpg' alt="Acerca de" />
+                    <img src={AboutLogo} alt="Acerca de" />
                 </div>
                 <div className="about-info">
                     <p>

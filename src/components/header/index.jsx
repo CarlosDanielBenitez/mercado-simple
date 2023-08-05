@@ -1,4 +1,6 @@
 import React, { useContext, useState } from 'react';
+import CartLogo from "../../img/finished-cart.png"
+import Logo from "../../img/buy.jpg";
 import './style.css';
 import { CartContext } from '../../context/cart-context';
 import {useNavigate} from 'react-router-dom';
@@ -48,7 +50,7 @@ const MobileMenu = () => {
           <li><a onClick={goToServices}>Services</a></li>
           <li><a onClick={goToContact}>Contact</a></li>
           <li onClick={goToCart} className='menu-cart-container'>
-            <img src="../../src/img/finished-cart.png" alt="cart" className="menu-cart-image" />
+            <img src={CartLogo} alt="cart" className="menu-cart-image" />
             <div className="menu-cart-count-container">
               <span className="menu-cart-count">{cart.length}</span>
             </div>
@@ -57,7 +59,7 @@ const MobileMenu = () => {
       </div>
 
       <div className="title-principal">
-        <img src="../../src/img/buy.jpg" alt="App Logo" className="app-logo" />
+        <img src={Logo} alt="AppLogo" className="app-logo" />
         <h1 className="app-title">Simple - Market</h1>
       </div>
     </>
