@@ -102,7 +102,7 @@ const Checkout = () => {
 
   return (
     <section className="contact-section">
-      <h2>Contacto</h2>
+      <h2>Contact</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
